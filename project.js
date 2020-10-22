@@ -20,6 +20,11 @@
  */
 function sumOdds(numbers) {
   // Your code here
+  let totalOddNumber = 0;
+  numbers.forEach(function (number) {
+    if (number % 2 !== 0) totalOddNumber = totalOddNumber + number;
+  });
+  return totalOddNumber;
 }
 
 /**
@@ -36,6 +41,8 @@ function sumOdds(numbers) {
  */
 function characterCount(string, c) {
   // Your code here
+  const string1 = "Character Count is clever";
+  const string2 = "character count is clever";
 }
 
 /**
@@ -90,6 +97,7 @@ function largestIncrement(numbers) {
  */
 function afterX(numbers, x) {
   // Your code here
+  console.log(numbers.slice(2));
 }
 
 /**
@@ -104,7 +112,8 @@ function afterX(numbers, x) {
  * Hint: Use string method .toUpperCase()
  */
 function abbreviate(firstName, lastName) {
-  // Your code here
+  const name = `${firstName[0]}${lastName[0]}`;
+  return name.toUpperCase();
 }
 
 /**
@@ -119,8 +128,12 @@ function abbreviate(firstName, lastName) {
  */
 function isUpperCase(string) {
   // Your code here
+  if (string !== isUpperCase) {
+    return false;
+  } else {
+    return true;
+  }
 }
-
 /**
  * elementInArray(numbers, x):
  * - receives an array of numbers, and a number `x`.
@@ -133,6 +146,11 @@ function isUpperCase(string) {
  */
 function elementInArray(numbers, x) {
   // Your code here
+  if (numbers.includes(x)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -147,17 +165,18 @@ function elementInArray(numbers, x) {
  */
 function reverseString(string) {
   // Your code here
+  let reversedString = string.split("").reverse().join("");
+  return reversedString;
 }
 
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 // console.log(characterCount("Character Count is clever", "c"));
 // console.log(differences([11, 35, 52, 14, 56]));
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
-// console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
-// console.log(abbreviate("miss", "Stephane"));
+//
+console.log(abbreviate("miss", "Stephane"));
 // console.log(isUpperCase("JCREW"));
 // console.log(elementInArray([5, 6, 7], 8));
-// console.log(reverseString("CODED"));
 
 module.exports = {
   sumOdds,
